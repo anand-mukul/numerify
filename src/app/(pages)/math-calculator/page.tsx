@@ -1,5 +1,6 @@
 "use client"
 
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useEffect, useState } from 'react';
 
@@ -12,6 +13,20 @@ const MathCalculator = () => {
     if (/^[\d()+\-*/.]*$/.test(value)) {
       setExpression(value);
     }
+  };
+
+
+  function handleKeyPress(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === 'Enter' || event.key === '=') {
+      handleCalculate();
+    }
+  }
+
+  const playButtonPressSound = (buttonType?: any) => {
+    const audio = new Audio(
+      buttonType === 'calculate' ? '/calculate.mp3' : buttonType === 'clear' ? '/clear.mp3' : '/click.mp3'
+    );
+    audio.play();
   };
 
   const handleKeyClick = (key: string) => {
@@ -50,29 +65,27 @@ const MathCalculator = () => {
   };
 
   const renderNumberKeys = () => {
-    const numbers = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '(', ')', '0', '.', '+', '-', '×', '÷'];
+    const numbers = ['C', '÷', '×', '←', '7', '8', '9', '-', '4', '5', '6', '+', '1', '2', '3', '.', '(', '0', ')', '='];
+
     return numbers.map((number) => (
-      <button
+      <Button
         key={number}
         className="px-4 py-3 bg-gray-200 font-semibold text-orange-700 rounded-lg shadow-sm shadow-orange-700 hover:drop-shadow-xl hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transform hover:scale-105 transition duration-300 ease-in-out"
         onClick={() => {
           if (number === '←') {
             setExpression((prevExpression) => prevExpression.slice(0, -1));
+          } else if (number === '=') {
+            handleCalculate();
+          } else if (number === 'C') {
+            clearExpression()
           } else {
             handleKeyClick(number);
           }
         }}
       >
         {number}
-      </button>
+      </Button>
     ));
-  };
-
-  const playButtonPressSound = (buttonType?: any) => {
-    const audio = new Audio(
-      buttonType === 'calculate' ? '/calculate.mp3' : buttonType === 'clear' ? '/clear.mp3' : '/click.mp3'
-    );
-    audio.play();
   };
 
   return (
@@ -85,6 +98,7 @@ const MathCalculator = () => {
             value={expression}
             onChange={(e) => handleInputChange(e.target.value)}
             placeholder="Enter expression"
+            onKeyDown={handleKeyPress}
           />
         </div>
         <div className="mb-8">

@@ -1,0 +1,45 @@
+{
+  "id": "update",
+  "type": "SharedSlice",
+  "name": "Update",
+  "description": "Update",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Releases",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "release_date": {
+          "type": "Date",
+          "config": {
+            "label": "Release Date",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "release_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Release Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "release_message": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Release Message",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      }
+    }
+  ]
+}

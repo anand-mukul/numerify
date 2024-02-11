@@ -35,7 +35,7 @@ export default function ComingSoon() {
         <div className="flex items-center justify-center">
           <h2 className="h-16 text-2xl md:text-5xl font-extrabold bg-gradient-to-r from-orange-100 via-orange-200 to-orange-100 bg-clip-text text-transparent">
             <Link
-              href={'https://numerify.online'}>
+              href={'https://numerify.vercel.app'}>
               Numerify.online
             </Link>
           </h2>

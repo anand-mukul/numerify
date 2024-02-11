@@ -61,6 +61,7 @@ Get started with [Numerify](https://numerify.vercel.app) in a few simple steps:
 - **Python**: High-level programming language for general-purpose programming.
 - **ShadCn/ui**: UI components library for React applications.
 - **Framer Motion**: Animation library for React.
+- **Prismic**: Dynamic update page to showcase Releases.
 
 ## Contributing
 
@@ -76,5 +77,6 @@ This project is licensed under the MIT License - see the [License](https://choos
 - [React Documentation](https://react.dev/learn)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Socket.IO Documentation](https://socket.io/docs)
+- [Prismic.IO Documentation](https://prismic.io/docs)
 
 ---

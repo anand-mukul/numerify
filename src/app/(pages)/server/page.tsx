@@ -51,11 +51,9 @@ function Server() {
   return (
     <div className="min-h-screen text-white font-sans bg-gradient-to-b from-neutral-50 via-orange-200 to-orange-400">
       <div className="m-4 flex items-center justify-center">
-        <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-4 font-extrabold text-center">
-          <h1 className="leading-tight bg-gradient-to-b from-neutral-50 via-orange-200 to-orange-400 bg-clip-text text-transparent">
-            Server Status
-          </h1>
-        </div>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center leading-tight bg-gradient-to-b from-neutral-50 via-orange-200 to-orange-400 bg-clip-text text-transparent">
+          Server Status
+        </h1>
       </div>
       <div className="flex justify-center items-center mt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
@@ -65,10 +63,8 @@ function Server() {
         </div>
       </div>
       <div className="flex w-full relative mt-16 flex-col">
-        <div className="p-4 text-4xl sm:text-2xl md:text-3xl lg:text-5xl space-y-4 font-extrabold text-center">
-          <h1 className="leading-tight text-muted text-orange-300">
-            Build with ❤️ using
-          </h1>
+        <div className="p-4 text-2xl md:text-3xl lg:text-4xl text-center font-extrabold leading-tight text-orange-400">
+          <span className=''>Build with ❤️ using</span>
         </div>
         <LogoCarousel />
       </div>
@@ -87,9 +83,9 @@ function ServerBox({ serverName, status, serverLink }: ServerBoxProps) {
     <div className="flex justify-center items-center">
       <div className="w-full max-w-md">
         <div className="p-6 rounded-lg shadow-lg bg-gradient-to-b from-orange-400 via-orange-200 to-orange-50">
-          <h2 className="text-2xl font-bold mb-4 text-orange-500 text-center">{serverName}</h2>
+          <h2 className="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-orange-500 text-center">{serverName}</h2>
           <Link href={serverLink} target='_blank'>
-            <Button className={`w-full flex items-center justify-center text-lg px-4 py-2 rounded ${status === 'online' ? 'bg-green-500' : 'bg-red-500'}`}>
+            <Button className={`w-full flex items-center justify-center text-base md:text-lg lg:text-xl px-4 py-2 rounded ${status === 'online' ? 'bg-green-500' : 'bg-red-500'}`}>
               {status === 'online' ? 'Online' : 'Offline'}
             </Button>
           </Link>

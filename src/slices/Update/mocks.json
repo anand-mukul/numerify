@@ -1,0 +1,48 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"release_date": {
+				"__TYPE__": "FieldContent",
+				"type": "Date",
+				"value": "2020-02-11"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"release_title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ipsum sit dolore cupidatat occaecat sunt occaecat. Ut eu commodo laboris ex id excepteur magna labore mollit dolor."
+									}
+								}
+							]
+						}
+					],
+					[
+						"release_message",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ad sint aliquip ea sit dolor tempor. Quis qui ea minim sint dolore minim mollit veniam."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -14,7 +14,7 @@ function StatusButton() {
   const fetchServerStatus = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://mathematical.pythonanywhere.com/api/status');
+      const response = await fetch('https://numerify.pythonanywhere.com/api/status');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
